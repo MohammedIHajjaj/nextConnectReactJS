@@ -1,0 +1,40 @@
+.add-post-component {
+    background-color: darkcyan;
+    height: 20vh;
+    width: 40vw;
+    margin-left: 20px;
+    margin-top: 3px;
+}
+
+.add-post {
+    display: flex;
+    align-items: center;
+}
+
+.add-post-input {
+    background-color: white;
+}
+
+.add-post-input .status-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.fa-camera {
+    padding: 15px;
+    color: brown;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: darkcyan;
+    height: 50px;
+}
+
+.post-btn {
+    margin-right: 10px;
+    height: 50%;
+} 

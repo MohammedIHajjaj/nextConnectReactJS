@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AddPosts from "../../components/add-post/addPosts";
 import Header from "../../components/header/header";
 import Posts from "../../components/posts/posts";
@@ -6,6 +6,16 @@ import "./home.css";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/posts/getAllPosts")
+      .then(async (res) => {
+        setPosts(await res.json());
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   let postHandler = (post) => {
     setPosts([
